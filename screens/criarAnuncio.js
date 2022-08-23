@@ -91,14 +91,14 @@ const styles = StyleSheet.create({
 
   btnProximo: {
     width: '30%',
-    left: '63%',
+    left: '66%',
     height: 40,
     color: 'white',
     backgroundColor:'#004AAD',
     alignItems: 'center',
     borderRadius: 7,
     justifyContent:'center',
-    margin: 20
+    margin: 10
   },
 
   textbtnProximo: {
@@ -116,9 +116,4 @@ const styles = StyleSheet.create({
     fontSize: 28,
     textAlign: 'center',
   },
-
-  image: {
-    width: 200,
-    height: 200
-  }
 })

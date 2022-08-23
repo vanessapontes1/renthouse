@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width:250,
     height: 250,
     paddingTop: 50,
-    margin: 60
+    margin: 45
   },
   text: {
     color:'black', 

@@ -24,10 +24,10 @@ export default function Login( {navigation} ){
             <Text style={styles.text}>Login</Text>
 
             <Text>Email</Text>
-            <TextInput style={styles.textInput} type={'email'} value={email} placeholder="Email"/>
+            <TextInput style={styles.textInput} onChangeText={text=> setEmail(text)} placeholder="Email"/>
 
             <Text>Senha</Text>
-            <TextInput style={styles.textInput} type={'senha'} value={senha} placeholder="Senha" secureTextEntry={true}/>
+            <TextInput style={styles.textInput} onChangeText={text=> setSenha(text)} placeholder="Senha" secureTextEntry={true}/>
 
             <TouchableOpacity style={styles.button} onPress={() => login()}>
                 <Text style={{color:'white', textAlign:'center'}}>Entrar</Text>
@@ -55,10 +55,9 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     image:{
-        width:200,
-        height: 200,
-        paddingTop: 50,
-        margin: 65
+        width:230,
+        height: 230,
+        margin: 45
         
     },
     button: {

@@ -38,9 +38,9 @@ export default function Perfil( {navigation} ) {
             
 
             <Separator/>
-            <TouchableOpacity style={styles.btnCadastro} onPress={() => alert()}>
+            {/* <TouchableOpacity style={styles.btnCadastro} onPress={() => alert()}>
                 <Text style={{color:'white', textAlign:'center'}}>Alterar</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
       
 
         </View>

@@ -51,7 +51,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-nativ
        padding: 20
     },
     textInput:{
-      width: '80%',
+      width: '40%',
       height: 40,
       backgroundColor:'#D3D3D3',
       borderRadius: 5,
@@ -66,7 +66,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-nativ
       margin: 10
     },
     valor:{
-      width: '100%',
+      width: '80%',
       height: 40,
       backgroundColor:'#D3D3D3',
       borderRadius: 5,

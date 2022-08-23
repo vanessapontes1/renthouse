@@ -70,16 +70,15 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   },
   Image: {
-    width:200,
-    height: 200,
-    paddingTop: 50,
-  },
+    width:230,
+    height: 230,
+    },
   text: {
     color:'black', 
     textAlign:'center',
     fontWeight: 'bold',
     fontSize: 28, 
-    margin: 10
+    margin: 20
   }
 });
 

@@ -17,15 +17,15 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Tela Inicial" component={TelaInicial}/>
-        <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="Cadastro" component={Cadastro}/>
-        <Stack.Screen name="Menu" component={Menu}/>
-        <Stack.Screen name="Criar Anúncio" component={CriarAnuncio}/>
-        <Stack.Screen name="Criar Anúncio Cômodos" component={CriarAnuncioComodos}/>
-        <Stack.Screen name="Perfil" component={Perfil}/>
-        <Stack.Screen name="Tirar Foto" component={TirarFoto}/>
-        <Stack.Screen name="Imoveis" component={Imoveis}/>
+        <Stack.Screen name="Tela Inicial" component={TelaInicial} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Login" component={Login} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Menu" component={Menu} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Criar Anúncio" component={CriarAnuncio} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Criar Anúncio Cômodos" component={CriarAnuncioComodos} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Perfil" component={Perfil} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Tirar Foto" component={TirarFoto} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Imoveis" component={Imoveis} options={{title:'', headerTransparent: true}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

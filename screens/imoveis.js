@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
+        marginTop: 40
     },
     text: {
       color:'black', 
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     image: {
       width:250,
       height: 150,
-      marginTop: 5
+      marginTop: 8
       
     },
     view: {
