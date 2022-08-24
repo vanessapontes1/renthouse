@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import { StyleSheet, Text, View, TextInput, Alert } from "react-native";
 import { TouchableOpacity } from "react-native";
 import axios from "axios";
 
@@ -16,6 +16,7 @@ export default function Cadastro( {navigation}) {
   const [cidade, setCidade,] = useState('')
   const [ email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
+  const [confirmarSenha, setConfirmarSenha] = useState('')
 
   const cadastro = () => {
     axios.post('https://630130f8e71700618a35dac0.mockapi.io/cadastro',
@@ -25,10 +26,16 @@ export default function Cadastro( {navigation}) {
             "estado": estado,
             "cidade": cidade,
             "email": email,
-            "senha": senha
+            "senha": senha,
+            "confirmarSenha":confirmarSenha
         }
     ).then((response) => {
-      navigation.navigate('Menu', {name: 'menu'})
+      if (nome === "" || dataNascimento === "" || estado === ""
+       || cidade === "" || email === "" || senha === ""|| confirmarSenha === ""  ){
+        Alert.alert("Preencha todos os campos abaixo!")
+      }else{
+        navigation.navigate('Menu', {name: 'menu'})
+      }
     }).catch(err => {
         alert("Falha no cadastro")
     })
@@ -49,10 +56,14 @@ export default function Cadastro( {navigation}) {
       <TextInput placeholder="Estado" style={styles.textInput} onChangeText={text=> setEstado(text)}/>
       <Text>Cidade:</Text>
       <TextInput placeholder="Cidade" style={styles.textInput} onChangeText={text=> setCidade(text)}/>
-      <Text>Email:</Text>
-      <TextInput placeholder="Email" style={styles.textInput} onChangeText={text=> setEmail(text)}/>
+      <Text>E-mail:</Text>
+      <TextInput placeholder="E-mail" style={styles.textInput} onChangeText={text=> setEmail(text)}/>
       <Text>Senha:</Text>
-      <TextInput secureTextEntry={true} placeholder="Senha" style={styles.textInput} onChangeText={text=> setSenha(text)}/>
+      <TextInput secureTextEntry={true} placeholder="Digite sua senha" style={styles.textInput} onChangeText={text=> setSenha(text)}/>
+      <Text> Confirmar Senha:</Text>
+      <TextInput secureTextEntry={true} placeholder="Confirmar sua senha" style={styles.textInput} onChangeText={text=> setConfirmarSenha(text)}/>
+      
+      
 
       <Separator/>
       <TouchableOpacity style={styles.btnCadastro} onPress={() => cadastro()}>
@@ -80,8 +91,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   btnCadastro:{
-    width: '50%',
-    left: '50%',
+    width: '40%',
+    left: '60%',
     height: 40,
     backgroundColor:'#004AAD',
     borderRadius: 5,

@@ -38,9 +38,9 @@ export default function Perfil( {navigation} ) {
             
 
             <Separator/>
-            {/* <TouchableOpacity style={styles.btnCadastro} onPress={() => alert()}>
-                <Text style={{color:'white', textAlign:'center'}}>Alterar</Text>
-            </TouchableOpacity> */}
+            <TouchableOpacity style={styles.btnCadastro} onPress={() => navigation.navigate('Meus Anúncios', {name : 'meusAnuncios'})}>
+                <Text style={{color:'white', textAlign:'center'}}>Meus Anúncios</Text>
+            </TouchableOpacity>
       
 
         </View>
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
       margin: 10
     },
       btnCadastro:{
-        width: '50%',
-        left: '50%',
+        width: '40%',
+        left: '60%',
         height: 40,
         backgroundColor:'#761212',
         borderRadius: 5,

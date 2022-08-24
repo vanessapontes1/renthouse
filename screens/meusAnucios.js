@@ -5,7 +5,7 @@ import {Feather} from '@expo/vector-icons';
 import axios from "axios"
 import { ScrollView } from "react-native";
 
-export default function Imoveis( {navigation} ) {
+export default function MeusAnuncios( {navigation} ) {
 
     const [criarAnuncio, setCriarAnuncio] = useState([]);
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function Imoveis( {navigation} ) {
                 <Feather size={24} color="black" name="search"  />
                 <TextInput style={styles.input}/>
             </View>
-            <Text style={styles.text}> Imóveis Disponíveis </Text>
+            <Text style={styles.text}> Meus Anúncios </Text>
             <Image style={styles.image} source={require('../assets/casa3.jpg')} />
             
             <View style={styles.view}>
@@ -37,25 +37,6 @@ export default function Imoveis( {navigation} ) {
 
             </View>
 
-            <Image style={styles.image} source={require('../assets/casa1.jpg')} />
-            <View style={styles.view}>
-                <Text style={styles.titulo}>Cidade:</Text>
-                <Text style={styles.info}>{criarAnuncio.cidade}</Text>
-
-                <Text style={styles.titulo}>Rua:</Text>
-                <Text style={styles.info}>{criarAnuncio.rua}</Text>
-
-            </View>
-
-            <Image style={styles.image} source={require('../assets/casa2.jpg')} />
-            <View style={styles.view}>
-                <Text style={styles.titulo}>Cidade:</Text>
-                <Text style={styles.info}>{criarAnuncio.cidade}</Text>
-
-                <Text style={styles.titulo}>Rua:</Text>
-                <Text style={styles.info}>{criarAnuncio.rua}</Text>
-
-            </View>
             <Image style={styles.image} source={require('../assets/casa4.jpg')} />
             <View style={styles.view}>
                 <Text style={styles.titulo}>Cidade:</Text>

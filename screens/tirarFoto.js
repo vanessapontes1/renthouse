@@ -62,7 +62,7 @@
         {
           photo ?
             <>
-              <Button title="Tirar outra Foto" onPress={async () => {
+              <Button style={styles.button}  title="Tirar outra Foto" onPress={async () => {
                 setPhoto(null);
               }}/>
               <Button style={styles.button} title="Postar" onPress={() => navigation.navigate('Imoveis', {name: 'imoveis'})}/>
@@ -97,7 +97,6 @@
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
     },
     camera: {
       flex: 1,

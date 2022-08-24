@@ -9,7 +9,8 @@ import CriarAnuncio from './screens/criarAnuncio';
 import CriarAnuncioComodos from './screens/criarAnuncioComodos';
 import Perfil from './screens/perfil';
 import TirarFoto from './screens/tirarFoto';
-import Imoveis from './screens/imoveis'
+import Imoveis from './screens/imoveis';
+import MeusAnuncios from './screens/meusAnucios';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ const App = () => {
         <Stack.Screen name="Perfil" component={Perfil} options={{title:'', headerTransparent: true}}/>
         <Stack.Screen name="Tirar Foto" component={TirarFoto} options={{title:'', headerTransparent: true}}/>
         <Stack.Screen name="Imoveis" component={Imoveis} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Meus Anúncios" component={MeusAnuncios} options={{title:'', headerTransparent: true}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
