@@ -22,7 +22,7 @@ export default function Cadastro( {navigation}) {
     axios.post('https://630130f8e71700618a35dac0.mockapi.io/cadastro',
         {
             "nome": nome,
-            "data": new Date(dataNascimento),
+            "dataNascimento": dataNascimento,
             "estado": estado,
             "cidade": cidade,
             "email": email,

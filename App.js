@@ -25,7 +25,7 @@ const App = () => {
         <Stack.Screen name="Criar Anúncio" component={CriarAnuncio} options={{title:'', headerTransparent: true}}/>
         <Stack.Screen name="Criar Anúncio Cômodos" component={CriarAnuncioComodos} options={{title:'', headerTransparent: true}}/>
         <Stack.Screen name="Perfil" component={Perfil} options={{title:'', headerTransparent: true}}/>
-        <Stack.Screen name="Tirar Foto" component={TirarFoto} options={{title:'', headerTransparent: true}}/>
+        <Stack.Screen name="Tirar Foto" component={TirarFoto} />
         <Stack.Screen name="Imoveis" component={Imoveis} options={{title:'', headerTransparent: true}}/>
         <Stack.Screen name="Meus Anúncios" component={MeusAnuncios} options={{title:'', headerTransparent: true}}/>
       </Stack.Navigator>
